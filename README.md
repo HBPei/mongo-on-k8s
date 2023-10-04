@@ -86,7 +86,7 @@ Make sure Minikube and kubectl are installed.
 - *As of this README written, it will not work on Mac M1/M2 due to docker driver used for minikube.*
 - *Windows users can continue to use Ingress to access MongoDB without a hitch (using HyperKit, Fusion, Hyper-V)*
 
-8 - Now execute the following below.
+8 - *(Skip this step if you are using Ingress Controller) Otherwise let's use Minikube to expose the service with the following.
 
 - `minikube service mongo-express-service` to automatically start the service on your local browser.
 - Once a browser pops up, type in the following for username/password: `admin / pass`
