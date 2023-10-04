@@ -83,8 +83,8 @@ Make sure Minikube and kubectl are installed.
 - `kubectl get po -n kube-system` to verify the creation of the pod _ingress-nginx-controller._
 - `kubectl apply -f mongo-ingress.yaml` to create the Ingress called mongodb-ingress.
 - `kubectl get ing -n mongodb-namespace` to list all Ingresses.
-- As of this README timing, it will not work on Mac M1/M2 due to docker driver used for minikube.
-- Windows users can continue to use Ingress to access MongoDB without a hitch (using HyperKit, Fusion, Hyper-V)
+- *As of this README written, it will not work on Mac M1/M2 due to docker driver used for minikube.*
+- *Windows users can continue to use Ingress to access MongoDB without a hitch (using HyperKit, Fusion, Hyper-V)*
 
 8 - Now execute the following below.
 
