@@ -99,9 +99,11 @@ Make sure Minikube and kubectl are installed.
 
 Credits goes to github.com/weechien for the image.
 
-10 - To delete all the service.
+## To delete all the Resources ##
 
 - `kubectl delete -f .` in the same working folder, or follow the next few steps to manually delete each K8s resources.
+
+OR 
 
 - `kubectl delete -f mongo.yaml` to delete the Service and Deployment.
 - `kubectl delete -f mongo-service.yaml` to delete the Service.
