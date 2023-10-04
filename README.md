@@ -2,8 +2,6 @@
 
 This project implements a basic web-based MongoDB admin interface on a Minikube kubernetes cluster.
 
-![](static/k8-flow.jpg)
-
 ## Prerequisite
 
 Make sure Minikube and kubectl are installed.
@@ -94,6 +92,12 @@ Make sure Minikube and kubectl are installed.
 - Once a browser pops up, type in the following for username/password: `admin / pass`
 
 9 - You should now see the Web UI for Mongo Express.
+
+## Architecture ##
+
+![](static/k8-flow.jpg)
+
+Credits goes to github.com/weechien for the image.
 
 10 - To delete all the service.
 
