@@ -34,7 +34,7 @@ Make sure Minikube and kubectl are installed.
 
   - `echo -n '<password>' | base64` to generate a base64 encoded string to be used as password in Secret, though a better hashing algorithm should be used.
 
-- A Namespace is akin to a virtual cluster to organize resources between multiple teams, versions or environments.
+- (Skip this Step) A Namespace is akin to a virtual cluster to organize resources between multiple teams, versions or environments.
 
   - `kubectl create namespace <name>` to create a namespace.
 
@@ -47,7 +47,7 @@ Make sure Minikube and kubectl are installed.
 - `minikube start` to start your cluster.
 - `kubectl get no` to list all worker nodes.
 
-2 - Create a Namespace, which is similar to a virtual folder/cluster. It's a organization structure.
+2 - (Skip this Step) Create a Namespace, which is similar to a virtual folder/cluster. It's a organization structure.
 
 - `kubectl apply -f mongo-namespace.yml` to create the Namespace called mongodb-namespace.
 - `kubectl delete -f mongo-namespace.yml` to delete the Namespace.
