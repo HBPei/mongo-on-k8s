@@ -116,3 +116,7 @@ OR
 - `kubectl delete -f mongo-ingress.yaml` to delete the Ingress. (This will prompt an error if you skip Step 7, since the Ingress resource does not exist)
 - `kubectl delete -f mongo-secret.yaml` to delete the Secret.
 - `kubectl delete -f mongo-namespace.yaml` to delete the Namespace.
+
+OR 
+
+- `kubectl delete -f mongo-namespace.yaml` to delete the Namespace and all resources under it.
