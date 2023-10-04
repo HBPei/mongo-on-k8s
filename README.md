@@ -47,7 +47,7 @@ Make sure Minikube and kubectl are installed.
 - `minikube start` to start your cluster.
 - `kubectl get no` to list all worker nodes.
 
-2 - Create a Namespace, which is similar to a virtual cluster.
+2 - Create a Namespace, which is similar to a virtual folder/cluster. It's a organization structure.
 
 - `kubectl apply -f mongo-namespace.yml` to create the Namespace called mongodb-namespace.
 - `kubectl delete -f mongo-namespace.yml` to delete the Namespace.
@@ -80,10 +80,14 @@ Make sure Minikube and kubectl are installed.
 - `kubectl apply -f mongo-express.yml` to create the Service called mongodb-express-service, and Deployment called mongodb-express-deployment.
 - `kubectl delete -f mongo-express.yml` to delete the Service and Deployment.
 
-7 - Create an Ingress resource, which defines rules on traffic routing, and an Ingress Controller (K8 Nginx), which manages external access to Services in a cluster. An external proxy server could be used to manage access to various clusters. Change the /etc/hosts file to map the host url stated in mongo-ingress.yml to the IP address of the Ingress Controller. Commented TLS key is used to enable HTTPS.
+7 - (Optional for Class, Skip to Step 8 - Will not work on Mac M1/M2) Create an Ingress resource, which defines rules on traffic routing, and an Ingress Controller (K8 Nginx), which manages external access to Services in a cluster. An external proxy server could be used to manage access to various clusters. Change the /etc/hosts file to map the host url stated in mongo-ingress.yml to the IP address of the Ingress Controller. Commented TLS key is used to enable HTTPS.
 
 - `minikube addons enable ingress` to automatically start the K8s Nginx implementation of Ingress Controller.
 - `kubectl get po -n kube-system` to verify the creation of the pod _ingress-nginx-controller._
 - `kubectl apply -f mongo-ingress.yml` to create the Ingress called mongodb-ingress.
 - `kubectl delete -f mongo-ingress.yml` to delete the Ingress.
 - `kubectl get ing -n mongodb-namespace` to list all Ingresses.
+
+8 - Now execute the following below.
+
+- `minikube service mongo-express-service` to automatically start the service on your local browser.
