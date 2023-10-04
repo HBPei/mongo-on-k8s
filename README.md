@@ -89,8 +89,11 @@ Make sure Minikube and kubectl are installed.
 8 - Now execute the following below.
 
 - `minikube service mongo-express-service` to automatically start the service on your local browser.
+- Once a browser pops up, type in the following for username/password: `admin / pass`
 
-9 - To delete all the service.
+9 - You should now see the Web UI for Mongo Express.
+
+10 - To delete all the service.
 
 - `kubectl delete -f .` in the same working folder, or follow the next few steps to manually delete each K8s resources.
 
