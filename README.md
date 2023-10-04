@@ -33,6 +33,8 @@ Make sure Minikube and kubectl are installed.
 - A Secret is similar to a ConfigMap, but more towards storing sensitive data, such as passwords, OAuth tokens, and ssh keys.
 
   - `echo -n '<password>' | base64` to generate a base64 encoded string to be used as password in Secret, though a better hashing algorithm should be used.
+  - Instead of base64, we were using certutils.
+  - MacOS should be using base64 since it is available.
 
 - (Skip this Step) A Namespace is akin to a virtual cluster to organize resources between multiple teams, versions or environments.
 
