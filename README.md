@@ -1,13 +1,19 @@
-# Mongo Express on Kubernetes
+# Mongo Express + MongoDB on Kubernetes
 
-This project implements a basic web-based MongoDB admin interface on a Minikube kubernetes cluster.
+This project implements a basic web-based MongoDB admin interface on a Kubernetes cluster (tested on Minikube, Docker Desktop, Rancher K3s, AWS, GCP, Azure, Tanzu Kubernetes)
+
+Tested on 
+- minikube v1.31.2,
+- kubectl v1.28.2
+- k8s 1.28
+
 
 ## Prerequisite
 
 Make sure Minikube and kubectl are installed.
 
 [kubectl installation](https://kubernetes.io/docs/tasks/tools/install-kubectl/)  
-[Minikube installation](https://minikube.sigs.k8s.io/docs/start/)
+[minikube installation](https://minikube.sigs.k8s.io/docs/start/)
 
 ## General Concepts
 
