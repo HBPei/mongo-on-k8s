@@ -93,11 +93,15 @@ Make sure Minikube and kubectl are installed.
 
 9 - You should now see the Web UI for Mongo Express.
 
+
+
 ## Architecture ##
 
 ![](static/k8-flow.jpg)
 
 Credits goes to github.com/weechien for the image.
+
+
 
 ## To delete all the Resources ##
 
