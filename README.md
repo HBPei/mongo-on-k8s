@@ -55,14 +55,14 @@ Make sure Minikube and kubectl are installed.
 
 3 - Create a Secret, which is used to store sensitive information. The Secret will contain the username and password for MongoDB.
 
-- `kubectl apply -f mongo-secret.yml` to create the Secret called mongodb-secret.
-- `kubectl delete -f mongo-secret.yml` to delete the Secret.
+- `kubectl apply -f mongo-secret.yaml` to create the Secret called mongodb-secret.
+- `kubectl delete -f mongo-secret.yaml` to delete the Secret.
 - `kubectl get secret -n mongodb-namespace` to list all Secrets.
 
 4 - Create a Deployment, which is used to manage Pods and ReplicaSets, and a Service, which defines a policy to access a set of Pods. The Deployment will contain a MongoDB Pod, and will use the username and password from Secret as the database credentials. The Service defined is an internal service, which is inaccessible outside of the Kubernetes cluster. It functions to enable other Pods within the cluster to communicate with the MongoDB Pod.
 
-- `kubectl apply -f mongo.yml` to create the Service called mongodb-service, and Deployment called mongodb-deployment.
-- `kubectl delete -f mongo.yml` to delete the Service and Deployment.
+- `kubectl apply -f mongo.yaml` to create the Service called mongodb-service, and Deployment called mongodb-deployment.
+- `kubectl delete -f mongo.yaml` to delete the Service and Deployment.
 - `kubectl get svc -n mongodb-namespace` to list all Services.
 - `kubectl get deploy -n mongodb-namespace` to list all Deployments.
 - `kubectl get rs -n mongodb-namespace` to list all Replicasets.
