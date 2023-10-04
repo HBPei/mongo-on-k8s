@@ -51,7 +51,7 @@ Make sure Minikube and kubectl are installed.
 
 2 - Create a Namespace, which is similar to a virtual folder/cluster. It's a organization structure.
 
-- `kubectl apply -f mongo-namespace.yml` to create the Namespace called mongodb-namespace.
+- `kubectl apply -f mongo-namespace.yaml` to create the Namespace called mongodb-namespace.
 - `kubectl get ns` to list all Namespaces.
 
 3 - Create a Secret, which is used to store sensitive information. The Secret will contain the username and password for MongoDB.
@@ -79,11 +79,11 @@ Make sure Minikube and kubectl are installed.
 - `kubectl apply -f mongo-express-service.yaml` to create the Service called mongodb-express-service.
 - `kubectl apply -f mongo-express.yaml` to create the Deployment called mongodb-express-deployment.
 
-7 - (Optional for Class, Skip to Step 8 - Will not work on Mac M1/M2) Create an Ingress resource, which defines rules on traffic routing, and an Ingress Controller (K8 Nginx), which manages external access to Services in a cluster. An external proxy server could be used to manage access to various clusters. Change the /etc/hosts file to map the host url stated in mongo-ingress.yml to the IP address of the Ingress Controller. Commented TLS key is used to enable HTTPS.
+7 - (Optional for Class, Skip to Step 8 - Will not work on Mac M1/M2) Create an Ingress resource, which defines rules on traffic routing, and an Nginx Ingress Controller, which manages external access to Services in a cluster. An external proxy server could be used to manage access to various clusters. Change the /etc/hosts file to map the host url stated in mongo-ingress.yaml to the IP address of the Ingress Controller. Commented TLS key is used to enable HTTPS.
 
 - `minikube addons enable ingress` to automatically start the K8s Nginx implementation of Ingress Controller.
 - `kubectl get po -n kube-system` to verify the creation of the pod _ingress-nginx-controller._
-- `kubectl apply -f mongo-ingress.yml` to create the Ingress called mongodb-ingress.
+- `kubectl apply -f mongo-ingress.yaml` to create the Ingress called mongodb-ingress.
 - `kubectl get ing -n mongodb-namespace` to list all Ingresses.
 
 8 - Now execute the following below.
@@ -98,6 +98,6 @@ Make sure Minikube and kubectl are installed.
 - `kubectl delete -f mongo-service.yaml` to delete the Service.
 - `kubectl delete -f mongo-express.yaml` to delete the Service and Deployment.
 - `kubectl delete -f mongo-config.yaml` to delete the Configmap.
-- `kubectl delete -f mongo-ingress.yml` to delete the Ingress. (This will prompt an error if you skip Step 7, since the Ingress resource does not exist)
+- `kubectl delete -f mongo-ingress.yaml` to delete the Ingress. (This will prompt an error if you skip Step 7, since the Ingress resource does not exist)
 - `kubectl delete -f mongo-secret.yaml` to delete the Secret.
-- `kubectl delete -f mongo-namespace.yml` to delete the Namespace.
+- `kubectl delete -f mongo-namespace.yaml` to delete the Namespace.
