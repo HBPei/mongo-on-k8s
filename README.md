@@ -79,12 +79,14 @@ Make sure Minikube and kubectl are installed.
 - `kubectl apply -f mongo-express-service.yaml` to create the Service called mongodb-express-service.
 - `kubectl apply -f mongo-express.yaml` to create the Deployment called mongodb-express-deployment.
 
-7 - (Optional for Class, Skip to Step 8 - Will not work on Mac M1/M2) Create an Ingress resource, which defines rules on traffic routing, and an Nginx Ingress Controller, which manages external access to Services in a cluster. An external proxy server could be used to manage access to various clusters. Change the /etc/hosts file to map the host url stated in mongo-ingress.yaml to the IP address of the Ingress Controller. Commented TLS key is used to enable HTTPS.
+7 - *(Skip for Class, Skip to Step 8)* Create an Ingress resource, which defines rules on traffic routing, and an Nginx Ingress Controller, which manages external access to Services in a cluster. An external proxy server could be used to manage access to various clusters. Change the /etc/hosts file to map the host url stated in mongo-ingress.yaml to the IP address of the Ingress Controller. Commented TLS key is used to enable HTTPS.
 
 - `minikube addons enable ingress` to automatically start the K8s Nginx implementation of Ingress Controller.
 - `kubectl get po -n kube-system` to verify the creation of the pod _ingress-nginx-controller._
 - `kubectl apply -f mongo-ingress.yaml` to create the Ingress called mongodb-ingress.
 - `kubectl get ing -n mongodb-namespace` to list all Ingresses.
+- As of this README timing, it will not work on Mac M1/M2 due to docker driver used for minikube.
+- Windows users can continue to use Ingress to access MongoDB without a hitch (using HyperKit, Fusion, Hyper-V)
 
 8 - Now execute the following below.
 
