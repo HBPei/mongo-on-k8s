@@ -49,7 +49,7 @@ Make sure Minikube and kubectl are installed.
 - `minikube start` to start your cluster.
 - `kubectl get no` to list all worker nodes.
 
-2 - Create a Namespace, which is similar to a virtual folder/cluster. It's a organization structure.
+2 - Create a Namespace, which is similar to a virtual folder/cluster. It's a organization structure for your microservices/applications.
 
 - `kubectl apply -f mongo-namespace.yaml` to create the Namespace called mongodb-namespace.
 - `kubectl get ns` to list all Namespaces.
