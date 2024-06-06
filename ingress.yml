@@ -8,7 +8,7 @@ spec:
   #   - myapp.com
   #     secretName: myapp-secret-tls
   rules:
-  - host: labs.kubernetes.day
+  - host: labs.local
     http:
       paths:
       - path: /
